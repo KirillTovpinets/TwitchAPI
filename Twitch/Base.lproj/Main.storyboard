@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ETh-1r-3SU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Games View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="GamesViewController" customModule="Twitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L6h-pC-5tq">
+                                <rect key="frame" x="16" y="0.0" width="343" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3Ch-GY-NvB">
+                                    <size key="itemSize" width="150" height="200"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                                </collectionViewFlowLayout>
+                                <activityIndicatorView key="backgroundView" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" id="JCo-wb-tey">
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="603"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </activityIndicatorView>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameCell" id="bHR-EN-Hk1" customClass="GameCell" customModule="Twitch" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="10" width="150" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ueh-hY-Aj2">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
+                                                    <color key="backgroundColor" red="0.38889421810000002" green="0.069653249449999996" blue="0.53964944950000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="ueh-hY-Aj2" secondAttribute="trailing" id="0wh-iy-2eo"/>
+                                            <constraint firstItem="ueh-hY-Aj2" firstAttribute="top" secondItem="bHR-EN-Hk1" secondAttribute="top" id="Ngd-9S-CWk"/>
+                                            <constraint firstAttribute="bottom" secondItem="ueh-hY-Aj2" secondAttribute="bottom" id="gXe-e1-OMF"/>
+                                            <constraint firstItem="ueh-hY-Aj2" firstAttribute="leading" secondItem="bHR-EN-Hk1" secondAttribute="leading" id="r8X-A6-LgZ"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="gameImageView" destination="ueh-hY-Aj2" id="O89-XM-QcN"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L6h-pC-5tq" secondAttribute="bottom" id="So1-C1-INa"/>
+                            <constraint firstItem="L6h-pC-5tq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Xkq-MJ-N22"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="L6h-pC-5tq" secondAttribute="trailing" id="YHf-Gz-nHO"/>
+                            <constraint firstItem="L6h-pC-5tq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="epN-kv-cXG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kaa-Re-HWB"/>
+                    <connections>
+                        <outlet property="gameCollectionView" destination="L6h-pC-5tq" id="zJf-mv-mkH"/>
+                        <outlet property="loadingIndicator" destination="JCo-wb-tey" id="fe9-8j-dyJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="840.79999999999995" y="122.78860569715144"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q16-3v-mIj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ETh-1r-3SU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="ZdL-o9-fre">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.38889421808345642" green="0.069653249447936771" blue="0.53964944948186533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="XoM-4W-GYI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bny-mR-LeH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="65" y="123"/>
+        </scene>
+    </scenes>
+</document>
